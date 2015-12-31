@@ -1,0 +1,235 @@
+<html lang="zh-cn" dir="ltr" class="client-js"><head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <title>获得首页的所有分类</title> 
+  <meta charset="UTF-8"> 
+  <meta name="generator" content="MediaWiki 1.18.2"> 
+  <link rel="shortcut icon" href="http://open.weibo.com/favicon.ico"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="http://open.weibo.com/wiki/opensearch_desc.php" title="微博API (zh-cn)"> 
+  <link rel="alternate" type="application/atom+xml" title="微博API的Atom" href="http://open.weibo.com/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom"> 
+  <link rel="stylesheet" href="API_files/load.css"> 
+  <link rel="stylesheet" href="API_files/wiki_main_lumpsugar.css" media="screen"> 
+  <link rel="stylesheet" href="API_files/common.css" media="screen"> 
+  <link rel="stylesheet" href="API_files/usually.css" media="screen"> 
+  <link rel="stylesheet" href="API_files/api_comment.css" media="screen"> 
+  <link rel="stylesheet" href="API_files/op_star.css" media="screen"> 
+  <link rel="stylesheet" href="API_files/layer_tips.css" media="screen"> 
+  <!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]--> 
+  <!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]--> 
+  <!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]--> 
+  <!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]-->
+  <style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style>
+  <style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style>
+  <style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style>
+  <style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style>
+  <style media="all" type="text/css">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style>
+  <style media="all" type="text/css">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style>
+  <meta name="ResourceLoaderDynamicStyles" content=""> 
+  <style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style> 
+  <script type="text/javascript" charset="utf-8" async="" src="http://js.t.sinajs.cn/open/analytics/js/suda.js?version=1.1.2.373"></script>
+  <script src="http://js.t.sinajs.cn/open/analytics/js/suda.js?version=1.1.2.373" async="" charset="utf-8" type="text/javascript"></script>
+  <script src="API_files/suda.js" async="" charset="utf-8" type="text/javascript"></script>
+  <script src="API_files/load.js"></script><script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script><script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=monobook&amp;version=20120321T063708Z"></script>
+  <script src="API_files/load_003.js"></script> 
+  <script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "2/statuses/public_timeline", "wgTitle": "2/statuses/public timeline", "wgCurRevisionId": 10008, "wgArticleId": 823, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+  <script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script><script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*" type="text/javascript"></script><script type="text/javascript" src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*" type="text/javascript"></script>
+  <script type="text/javascript" src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*"></script>
+  <script src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*" type="text/javascript"></script>
+  <script type="text/javascript" src="/wiki/load.php?debug=false&amp;lang=zh-cn&amp;modules=jquery.client%7Cmediawiki.page.startup&amp;skin=monobook&amp;version=20140327T095304Z&amp;*"></script>
+  <script type="text/javascript" src="API_files/load_004.js"></script> 
+ </head> 
+ <body class="mediawiki ltr sitedir-ltr B_wiki_main  skin-monobook"> 
+  <!--主内容开始--> 
+  <div class="wiki_wrap"> 
+   <div class="wiki_con"> 
+    <div class="con_box"> 
+     <div class="header noprint"> 
+      <a href="http://open.weibo.com/wiki/" title="开发文档" class="wiki_logo">开发文档</a> 
+     </div> 
+     <div class="wiki_body"> 
+      <div class="wiki_inner"> 
+       <div class="main_content clearfix"> 
+        <div class="wiki_bodyContent" id="bodyContent"> 
+         <div id="mw-js-message" class="js-messagebox" style="display:none"></div> 
+         <h1 id="firstHeading" class="firstHeading">http://mobile.video.qq.com/fcgi-bin/dout_iphone</h1> 
+         <div id="jump-to-nav">
+          跳转到： 
+          <a href="#column-one">导航</a>, 
+          <a href="#searchInput">搜索</a>
+         </div> 
+         <div lang="zh-cn" dir="ltr" class="mw-content-ltr"> 
+          <p>获得首页的所有分类</p> 
+           
+           
+           
+           
+          <h2 class="wiki_title"> <span class="mw-headline" id="HTTP.E8.AF.B7.E6.B1.82.E6.96.B9.E5.BC.8F">HTTP请求方式</span></h2> 
+          <p><span style="text-transform:uppercase;font-weight:600">GET</span> </p> 
+          <h2 class="wiki_title"> <span class="mw-headline" id=".E8.AF.B7.E6.B1.82.E5.8F.82.E6.95.B0">请求参数</span></h2> 
+          <table width="100%" cellspacing="0" cellpadding="0" border="1" class="parameters" style="border-color: #CCCCCC;"> 
+           <tbody>
+            <tr> 
+             <th width="10%" style="text-align:center;font-weight:bolder;border:1px solid #cccccc">&nbsp; </th> 
+              
+             <th width="10%" style="text-align:center;font-weight:bolder;border:1px solid #cccccc">类型及范围 </th> 
+             <th width="75%" style="text-align:center;font-weight:bolder;border:1px solid #cccccc">说明 </th>
+            </tr> 
+            <tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">auto_id</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">65</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">platform</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">7</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">version</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">30000</td>
+            </tr><tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">p</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">7</td>
+            </tr><tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">v</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">36000</td>
+            </tr><tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">s</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">1</td>
+            </tr><tr> 
+             <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">otype</td> 
+              
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">json或者xml，默认是xml</td>
+            </tr>
+           </tbody>
+          </table> 
+          <h2 class="wiki_title"> <span class="mw-headline" id=".E8.BF.94.E5.9B.9E.E7.BB.93.E6.9E.9C">返回结果 </span></h2> 
+          <p><span style="text-transform:uppercase;font-weight:600">JSON示例</span><br> </p> 
+          <pre>{
+    "costtime": 1756,
+    "nav": [
+        {
+            "c_pic": "http://i.gtimg.cn/qqlive/images/20140318/i1395112900_1.jpg",
+            "engname": "",
+            "hide": 0,
+            "name": "精选",
+            "type": 1,
+            "ztid": 100101
+        },
+        ......
+    ],
+    "returncode": 0,
+    "returnmsg": "ok"
+}
+          	</pre>
+          <br> 
+          <h2 class="wiki_title"> <span class="mw-headline" id=".E8.BF.94.E5.9B.9E.E5.AD.97.E6.AE.B5.E8.AF.B4.E6.98.8E">返回字段说明</span></h2> 
+          <table width="100%" cellspacing="0" cellpadding="0" border="1" class="parameters" style="border-color: #CCCCCC;"> 
+           <tbody>
+            <tr> 
+             <th width="25%" style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">返回值字段 </th> 
+             <th width="15%" style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">字段类型 </th> 
+             <th width="60%" style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">字段说明 </th>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">c_pic</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">图标</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">engname</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">英文名</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">hide</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">int</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">是否隐藏</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">name</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string </td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">类型名称</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">type</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">int</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">类型</td>
+            </tr> 
+            <tr> 
+             <td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">ztid</td> 
+             <td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">int</td> 
+             <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">类型id</td>
+            </tr> 
+           </tbody>
+          </table> 
+          <!-- 
+NewPP limit report
+Preprocessor node count: 549/1000000
+Post-expand include size: 29399/2097152 bytes
+Template argument size: 11021/2097152 bytes
+Expensive parser function count: 0/100
+--> 
+          <!-- Saved in parser cache with key wiki:pcache:idhash:823-0!*!0!!*!*!* and timestamp 20140803085302 --> 
+         </div>
+         <div class="printfooter">
+           来自“
+          <a href="http://open.weibo.com/wiki/index.php?title=2/statuses/public_timeline&amp;oldid=10008">http://open.weibo.com/wiki/index.php?title=2/statuses/public_timeline&amp;oldid=10008</a>”
+         </div> 
+         <div id="catlinks" class="catlinks catlinks-allhidden"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--/主内容开始--> 
+  <!--统一底导结构--> 
+  <!--/统一底导结构--> 
+  <!--反馈入口--> 
+  <!-- Served in 0.445 secs. --> 
+ 
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div><div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div></body></html>
